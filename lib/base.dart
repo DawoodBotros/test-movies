@@ -31,7 +31,9 @@ abstract class BaseView<T, VM extends BaseViewModel>
   }
 
   @override
-  void showLoading(String message,) {
+  void showLoading(
+    String message,
+  ) {
     showDialog(
       context: context,
       builder: (context) {

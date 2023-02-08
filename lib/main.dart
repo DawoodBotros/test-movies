@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:movies/layout/home_layout.dart';
+import 'package:movies/moduels/details/detailsView.dart';
+import 'package:movies/moduels/search/searchView.dart';
+import 'package:movies/moduels/splash/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,8 +24,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           initialRoute: HomeLayout.routeName,
           routes: {
+         //   SplashScreen.routeName :(context) => SplashScreen(),
             HomeLayout.routeName: (context) => HomeLayout(),
-          //  Search.routName : (context) => Search(),
+            MovieDetailsView.routeName :(context) =>MovieDetailsView(),
+            Searchlayout.routeName : (context) => Searchlayout(),
           },
         );
       },

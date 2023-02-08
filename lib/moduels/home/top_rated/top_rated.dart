@@ -2,12 +2,13 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:movies/model/SourcesTopRated.dart';
 import 'package:movies/model/popular_response.dart';
+import 'package:movies/moduels/details/detailsView.dart';
 
 import '../../../shared/constants/constants.dart';
 import '../../../shared/styles/colors.dart';
 
 class TopRated extends StatelessWidget {
-  SourcesResults results;
+ Results results;
 
   TopRated({required this.results});
 
@@ -17,6 +18,7 @@ class TopRated extends StatelessWidget {
     return InkWell(
       onTap: () {
         // Navigator o to Details
+        Navigator.pushNamed(context, MovieDetailsView.routeName,arguments: results);
       },
       child: Container(
         color: colorBlack,
